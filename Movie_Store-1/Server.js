@@ -19,16 +19,12 @@ app.get('/showMovie', (req, res) =>{ res.render('ShowMovie.ejs') });
 
 app.post('/ShowMovie',  (req, res) => {
     const MovieID = req.body.index;
-    console.log(MovieID)
 
     const url = "http://www.omdbapi.com/?i=" + MovieID + "&apikey=674499c5";
 
     http.get(url, function (response) {
-        console.log(response.statusCode);
         response.on("data", function (data) {
             const details = JSON.parse(data);
-            console.log(details)
-
             const title = details.Title;
             const poster = details.Poster;
             const year = details.Year;

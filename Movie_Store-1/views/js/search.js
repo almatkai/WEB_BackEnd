@@ -95,7 +95,7 @@ window.addEventListener('click', (event) => {
 });
 
 function displayTrailers(search) {
-    search += " trailer movie"
+    search += " official trailer movie"
     $.get("https://www.googleapis.com/youtube/v3/search?key=" + API_KEY_TRAILERS + "&type=video&part=snippet&maxResults=" + 1 + "&q=" + search, function(data) {
         let video = ''
         data.items.forEach(item => {

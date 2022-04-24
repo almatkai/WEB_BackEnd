@@ -5,9 +5,7 @@
     "express": "^4.17.3"
   },
   "scripts": {
-    "start": "node Server.js",
-    "serve": "nodemon Server.js",
-    "dev": "nodemon Server.js"
+    "dev":"nodemon Server.js"
   },
   "name": "movie_store",
   "version": "1.0.0",
