@@ -6,7 +6,7 @@ $(document).ready(function() {
         e.preventDefault();
         let search = $("#search").val()+"trailer";
 
-        videoSearch(API_KEY, search, 1)
+        videoSearch(API_KEY, search, 2)
     })
     function videoSearch(API_KEY, search, results) {
         $.get("https://www.googleapis.com/youtube/v3/search?key=" + API_KEY + "&type=video&part=snippet&maxResults=" + results + "&q=" + search, function(data) {
