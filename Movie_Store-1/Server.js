@@ -2,12 +2,25 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
 const http = require("http");
+const dbConfig = require('./config/database.config.js');
+const {create} = require("./Controllers/usercontroller");
+const mongoose = require('mongoose')
 const app = express()
 const port = 3000
 
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, 'views')));
 app.use(bodyParser.urlencoded({extended: true}))
+mongoose.Promise = global.Promise;
+mongoose.connect(dbConfig.url, {
+    useNewUrlParser: true
+}).then(() => {
+    console.log("Database Connected Successfully!!");
+}).catch(err => {
+    console.log('Could not connect to the database', err);
+    process.exit();
+});
+
 
 app.get('/', (req, res) =>{ res.render('index.ejs') });
 
@@ -16,6 +29,12 @@ app.get('/search', (req, res) =>{ res.render('search.ejs') });
 app.get('/trailer', (req, res) =>{ res.render('trailer.ejs') });
 
 app.get('/showMovie', (req, res) =>{ res.render('ShowMovie.ejs') });
+
+app.get('/signup', (req, res) =>{ res.render('Signup.ejs') });
+
+app.post('/sign_up', (req, res) => {
+    create(req,res)
+});
 
 app.post('/ShowMovie',  (req, res) => {
     const MovieID = req.body.index;
