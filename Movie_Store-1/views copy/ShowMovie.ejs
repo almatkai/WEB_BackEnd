@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search Website</title>
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel = "stylesheet" type="text/css" href="css/searchStyle.css">
+</head>
+<body>
+<div class = "wrapper">
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="/"><h1 class="logo">moviii</h1></a>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Series</li>
+                    <li class="menu-list-item">Popular</li>
+                    <li class="menu-list-item">Trends</li>
+                    <a href="trailer"><li class="menu-list-item">Trailers</li></a>
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="img/profile.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <a href="search"><i class="left-menu-icon fas fa-search"></i></a>
+        <a href="/"><i class="left-menu-icon fas fa-home"></i></a>
+        <i class="left-menu-icon fas fa-users"></i>
+        <i class="left-menu-icon fas fa-bookmark"></i>
+        <i class="left-menu-icon fas fa-tv"></i>
+        <i class="left-menu-icon fas fa-hourglass-start"></i>
+        <i class="left-menu-icon fas fa-shopping-cart"></i>
+    </div>
+
+    <div class = "movie-poster" style="position: absolute;transform: translate(350px, 100px);">
+            <% if (filmPoster == 'N/A') { %>
+               <img src="img/image_not_found.png">
+            <% } %>
+
+            <% if (filmPoster != 'N/A') { %>
+               <img src = "<%=filmPoster%>">
+            <% } %>
+    </div>
+    <div class = "movie-info" style="transform: translate(750px, 95px);">
+            <h3 class = "movie-title"><%=filmTitle%></h3>
+                <ul class = "movie-misc-info">
+                    <li class = "year">Year: <%=filmYear%> </li>
+                    <li class = "rated">Ratings: <%=filmRated%> </li>
+                    <li class = "released">Released: <%=filmReleased%> </li>
+                </ul>
+            <p class = "genre"><b>Genre:</b> <%=filmGenre%> </p>
+            <p class = "writer"><b>Writer:</b> <%=filmWriter%> </p>
+            <p class = "actors"><b>Actors: </b> <%=filmActors%> </p>
+            <p class = "plot"><b>Plot:</b> <%=filmPlot%></p>
+            <p class = "language"><b>Language:</b> <%=filmLanguage%> </p>
+            <p class = "awards"><b><i class = "fas fa-award"></i></b> <%=filmAwards%> </p>
+    </div>
+<script type="text/javascript" src = "Server.js"></script>
+</body>
+</html>
