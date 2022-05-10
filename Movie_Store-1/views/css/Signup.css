@@ -278,15 +278,15 @@ h6 {
 }
 
 .btn--green {
-    background: #57b846;
+    background: red;
 }
 
 .btn--green:hover {
-    background: #4dae3c;
+    background: red;
 }
 
 .btn--blue {
-    background: #4272d7;
+    background: #ff0000;
 }
 
 .btn--blue:hover {
@@ -369,7 +369,7 @@ input {
     border-radius: 5px;
     padding: 0 20px;
     font-size: 16px;
-    color: #666;
+    color: #000000;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -378,24 +378,24 @@ input {
 
 .input--style-4::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
-    color: #666;
+    color: #ffffff;
 }
 
 .input--style-4:-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-    color: #666;
+    color: #ffffff;
     opacity: 1;
 }
 
 .input--style-4::-moz-placeholder {
     /* Mozilla Firefox 19+ */
-    color: #666;
+    color: #ffffff;
     opacity: 1;
 }
 
 .input--style-4:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #666;
+    color: #ffffff;
 }
 
 .input--style-4:-ms-input-placeholder {
@@ -405,7 +405,7 @@ input {
 
 .label {
     font-size: 16px;
-    color: #555;
+    color: #ffffff;
     text-transform: capitalize;
     display: block;
     margin-bottom: 5px;
@@ -417,7 +417,7 @@ input {
     padding-left: 30px;
     cursor: pointer;
     font-size: 16px;
-    color: #666;
+    color: #ffffff;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -451,7 +451,7 @@ input {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    background: #57b846;
+    background: red;
 }
 
 .checkmark {
@@ -567,7 +567,7 @@ input {
     font-family: "Material-Design-Iconic-Font";
     content: '\f2f9';
     font-size: 24px;
-    color: #999;
+    color: #ffffff;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -604,7 +604,7 @@ input {
    ========================================================================== */
 .title {
     font-size: 24px;
-    color: #525252;
+    color: #ffffff;
     font-weight: 400;
     margin-bottom: 40px;
 }
