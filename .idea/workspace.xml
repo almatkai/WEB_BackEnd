@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99d257db-8e24-4d61-b811-84419a7deed6" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movie_Store-1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Store-1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movie_Store-1/Controllers/usercontroller.js" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Store-1/Controllers/usercontroller.js" afterDir="false" />
+=======
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/Movie_Store-1/views/signin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Movie_Store-1/views/signin.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +84,10 @@
       <workItem from="1652285855298" duration="4329000" />
       <workItem from="1652292055851" duration="82000" />
       <workItem from="1652293048744" duration="397000" />
+<<<<<<< Updated upstream
+=======
+      <workItem from="1652293556201" duration="216000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
