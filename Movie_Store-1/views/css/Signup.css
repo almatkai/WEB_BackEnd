@@ -1,13 +1,14 @@
 /* ==========================================================================
    #FONT
    ========================================================================== */
-.font-robo {
-    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
-}
+/*.font-robo {*/
+/*    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;*/
+/*}*/
 
-.font-poppins {
-    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-}
+/*.font-poppins {*/
+/*    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;*/
+/*}*/
+
 
 /* ==========================================================================
    #GRID
@@ -30,7 +31,6 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
 }
-
 .col-2 {
     width: -webkit-calc((100% - 30px) / 2);
     width: -moz-calc((100% - 30px) / 2);
@@ -633,9 +633,13 @@ input {
     padding: 57px 65px;
     padding-bottom: 65px;
 }
-
 @media (max-width: 767px) {
     .card-4 .card-body {
         padding: 50px 40px;
     }
+}
+.logo {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    color: #4dbf00;
 }

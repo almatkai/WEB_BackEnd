@@ -1,7 +1,6 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
-
 }
 html{
   scroll-behavior: smooth;
@@ -24,8 +23,10 @@ a{
   margin-right: 5px;
   background-color: red;
   border-radius: 8px;
-  padding: 8px 12px;
-  font-family: "Sen", sans-serif;
+  padding: 6px 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 450;
+  transition: all 0.3s;
 }
 .signIn-button:hover {
   background-color: #be0000;
