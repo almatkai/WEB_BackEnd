@@ -669,3 +669,6 @@ input {
     font-family: "Sen", sans-serif;
     font-weight: bold;
 }
+.card{
+    margin-top: -40px;
+}
