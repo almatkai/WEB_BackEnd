@@ -17,7 +17,7 @@
     <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
     <!-- Main CSS-->
-    <link href="css/Signup.css" rel="stylesheet" media="all">
+    <link href="css/Signup_in.css" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -25,7 +25,9 @@
     <div class="wrapper wrapper--w680">
         <div class="card card-4">
             <div class="card-body">
-                <h2 class="title">Registration Form</h2>
+                <h1>
+                    <a class="logo" href="/">moviii</a>
+                </h1>
 
 
                 <form  action="sign_up" method="POST">
@@ -46,9 +48,9 @@
                     <div class="row row-space">
                         <div class="col-2">
                             <div class="input-group">
-                                <label class="label">Birthday</label>
+                                <label class="label">Age</label>
                                 <div class="input-group-icon">
-                                    <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                    <input class="input--style-4 js-datepicker" type="number" name="age">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
                             </div>
@@ -83,9 +85,23 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Password</label>
+                                <input class="input--style-4" type="password" name="password">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label class="label">Confirm password</label>
+                                <input class="input--style-4" type="password" name="confirmpass">
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="p-t-15">
-                        <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                        <button class="btn btn--radius-2 btn--blue" type="submit">Create</button>
                     </div>
                 </form>
              </div>

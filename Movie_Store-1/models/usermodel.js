@@ -10,9 +10,16 @@ let schema = new mongoose.Schema({
 
     },
     lastName:  String,
-    phone: String,
-    birthday: String/*{ type: Date }*/,
-    gender: String
+    phone: {
+        type: String,
+        required: [true, 'User phone number required']
+    },
+    age: Number,
+    gender: String,
+    password: {
+        type: String,
+        required: [true, 'User password required']
+    }
 });
 let userModel = new mongoose.model('User', schema);
 module.exports = userModel;
