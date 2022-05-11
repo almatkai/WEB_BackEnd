@@ -13,6 +13,30 @@
 /* ==========================================================================
    #GRID
    ========================================================================== */
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+}
 .row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -638,8 +662,14 @@ input {
         padding: 50px 40px;
     }
 }
+
+.logo-container {
+    flex: 1;
+}
+
 .logo {
-    font-family: "Roboto", sans-serif;
     font-size: 30px;
     color: #4dbf00;
+    font-family: "Sen", sans-serif;
+    font-weight: bold;
 }
