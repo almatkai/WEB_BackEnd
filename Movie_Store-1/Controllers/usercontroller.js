@@ -31,16 +31,14 @@ exports.create = async (req, res) => {
 
 // Find a single User
 exports.findOne = async (req, res) => {
-        console.log("hello")
-        UserModel.findOne({email: req.body.email, password: req.body.password}, function (err, user) {
-            if (err) {
-                console.log(err);
-            }
-
-            if (!user) {
-                error_msg = "Invalid login or password"
-                return res.render('signin',{errormsg: error_msg})
-            }
-            return res.render('index.ejs');
-        })
+    UserModel.findOne({email: req.body.email, password: req.body.password}, function (err, user) {
+        if (err) {
+            console.log(err);
+        }
+        if (!user) {
+            error_msg = "Invalid login or password"
+            return res.render('signin',{errormsg: error_msg})
+        }
+        return res.render('index.ejs');
+    })
 }
