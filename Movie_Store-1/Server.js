@@ -3,11 +3,14 @@ const bodyParser = require('body-parser')
 const path = require('path')
 const http = require("http");
 const dbConfig = require('./config/database.config.js');
-const {create} = require("./Controllers/usercontroller");
+const {create, findOne} = require("./Controllers/usercontroller");
 const mongoose = require('mongoose')
+const UserModel = require("./models/usermodel");
 const app = express()
-const port = 3000
-
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 8000;
+}
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, 'views')));
 app.use(bodyParser.urlencoded({extended: true}))
@@ -31,9 +34,15 @@ app.get('/trailer', (req, res) =>{ res.render('trailer.ejs') });
 app.get('/showMovie', (req, res) =>{ res.render('ShowMovie.ejs') });
 
 app.get('/signup', (req, res) =>{ res.render('Signup.ejs') });
+app.get('/signin', (req, res) =>{ res.render('signin.ejs',{errormsg: " "}) });
+
 
 app.post('/sign_up', (req, res) => {
     create(req,res)
+});
+
+app.post('/signin', (req, res) => {
+    findOne(req, res);
 });
 
 app.post('/ShowMovie',  (req, res) => {

@@ -1,17 +1,20 @@
-/* ==========================================================================
-   #FONT
-   ========================================================================== */
 .font-robo {
     font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+.logo {
+    vertical-align: text-top;
+    font-size: 30px;
+    color: #4dbf00;
 }
 
 .font-poppins {
     font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
 }
 
-/* ==========================================================================
-   #GRID
-   ========================================================================== */
 .row {
     display: -webkit-box;
     display: -webkit-flex;
@@ -43,17 +46,11 @@
     }
 }
 
-/* ==========================================================================
-   #BOX-SIZING
-   ========================================================================== */
-/**
- * More sensible default box-sizing:
- * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
- */
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 * {
@@ -67,12 +64,6 @@ html {
     box-sizing: inherit;
 }
 
-/* ==========================================================================
-   #RESET
-   ========================================================================== */
-/**
- * A very simple reset that sits on top of Normalize.css.
- */
 body,
 h1, h2, h3, h4, h5, h6,
 blockquote, p, pre,
@@ -84,26 +75,16 @@ fieldset, legend {
     padding: 0;
 }
 
-/**
- * Remove trailing margins from nested lists.
- */
 li > ol,
 li > ul {
     margin-bottom: 0;
 }
 
-/**
- * Remove default table spacing.
- */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
-/**
- * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
- *    on fieldsets.
- */
 fieldset {
     min-width: 0;
     /* [1] */
@@ -116,9 +97,6 @@ button {
     border: none;
 }
 
-/* ==========================================================================
-   #PAGE WRAPPER
-   ========================================================================== */
 .page-wrapper {
     min-height: 100vh;
 }
@@ -134,6 +112,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+    background-color: #070707;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0px 50px 20px 50px;
     font-size: 36px;
 }
 
@@ -157,9 +139,6 @@ h6 {
     font-size: 13px;
 }
 
-/* ==========================================================================
-   #BACKGROUND
-   ========================================================================== */
 .bg-blue {
     background: #2c6ed5;
 }
@@ -169,24 +148,21 @@ h6 {
 }
 
 .bg-gra-01 {
-    background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a18cd1));
-    background: -webkit-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-    background: -moz-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-    background: -o-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-    background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#151515), to(red));
+    background: -webkit-linear-gradient(bottom, #151515 0%, red 100%);
+    background: -moz-linear-gradient(bottom, #151515 0%, red 100%);
+    background: -o-linear-gradient(bottom, #151515 0%, red 100%);
+    background: linear-gradient(to top, #151515 0%, red 100%);
 }
 
 .bg-gra-02 {
-    background: -webkit-gradient(linear, left bottom, right top, from(#fc2c77), to(#6c4079));
-    background: -webkit-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
-    background: -moz-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
-    background: -o-linear-gradient(bottom left, #fc2c77 0%, #6c4079 100%);
-    background: linear-gradient(to top right, #fc2c77 0%, #6c4079 100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#151515), to(red));
+    background: -webkit-linear-gradient(bottom, #151515 20%, red 100%);
+    background: -moz-linear-gradient(bottom, #151515 20%, red 100%);
+    background: -o-linear-gradient(bottom, #151515 20%, red 100%);
+    background: linear-gradient(to top, #151515 20%, red 100%);
 }
 
-/* ==========================================================================
-   #SPACING
-   ========================================================================== */
 .p-t-100 {
     padding-top: 100px;
 }
@@ -205,6 +181,8 @@ h6 {
 
 .p-t-15 {
     padding-top: 15px;
+    padding-bottom: 10px;
+
 }
 
 .p-t-10 {
@@ -223,28 +201,22 @@ h6 {
     margin-right: 45px;
 }
 
-/* ==========================================================================
-   #WRAPPER
-   ========================================================================== */
 .wrapper {
     margin: 0 auto;
 }
 
 .wrapper--w960 {
-    max-width: 960px;
+    max-width: fit-content;
 }
 
 .wrapper--w780 {
-    max-width: 780px;
+    max-width: fit-content;
 }
 
 .wrapper--w680 {
-    max-width: 680px;
+    max-width: fit-content;
 }
 
-/* ==========================================================================
-   #BUTTON
-   ========================================================================== */
 .btn {
     display: inline-block;
     line-height: 50px;
@@ -278,24 +250,21 @@ h6 {
 }
 
 .btn--green {
-    background: red;
+    background: #57b846;
 }
 
 .btn--green:hover {
-    background: red;
+    background: #4dae3c;
 }
 
 .btn--blue {
-    background: #ff0000;
+    background: #ff0202;
 }
 
 .btn--blue:hover {
-    background: #3868cd;
+    background: #a90000;
 }
 
-/* ==========================================================================
-   #DATE PICKER
-   ========================================================================== */
 td.active {
     background-color: #2c6ed5;
 }
@@ -343,9 +312,6 @@ input[type="date" i] {
     outline: none;
 }
 
-/* ==========================================================================
-   #FORM
-   ========================================================================== */
 input {
     outline: none;
     margin: 0;
@@ -359,6 +325,7 @@ input {
 }
 
 .input--style-4 {
+    width: auto;
     line-height: 50px;
     background: #fafafa;
     -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
@@ -369,7 +336,7 @@ input {
     border-radius: 5px;
     padding: 0 20px;
     font-size: 16px;
-    color: #000000;
+    color: #666;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -378,24 +345,24 @@ input {
 
 .input--style-4::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
-    color: #ffffff;
+    color: #666;
 }
 
 .input--style-4:-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-    color: #ffffff;
+    color: #666;
     opacity: 1;
 }
 
 .input--style-4::-moz-placeholder {
     /* Mozilla Firefox 19+ */
-    color: #ffffff;
+    color: #666;
     opacity: 1;
 }
 
 .input--style-4:-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #ffffff;
+    color: #666;
 }
 
 .input--style-4:-ms-input-placeholder {
@@ -405,7 +372,7 @@ input {
 
 .label {
     font-size: 16px;
-    color: #ffffff;
+    color: #111111;
     text-transform: capitalize;
     display: block;
     margin-bottom: 5px;
@@ -417,7 +384,7 @@ input {
     padding-left: 30px;
     cursor: pointer;
     font-size: 16px;
-    color: #ffffff;
+    color: #666;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -451,7 +418,7 @@ input {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    background: red;
+    background: #57b846;
 }
 
 .checkmark {
@@ -567,7 +534,7 @@ input {
     font-family: "Material-Design-Iconic-Font";
     content: '\f2f9';
     font-size: 24px;
-    color: #ffffff;
+    color: #999;
     -webkit-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
@@ -599,28 +566,23 @@ input {
     padding-left: 22px;
 }
 
-/* ==========================================================================
-   #TITLE
-   ========================================================================== */
 .title {
     font-size: 24px;
-    color: #ffffff;
+    color: #525252;
     font-weight: 400;
     margin-bottom: 40px;
 }
 
-/* ==========================================================================
-   #CARD
-   ========================================================================== */
 .card {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     background: #fff;
+    margin-top: -50px;
 }
 
 .card-4 {
-    background: #fff;
+    background: #e0e0e0;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -630,6 +592,8 @@ input {
 }
 
 .card-4 .card-body {
+    display:flex;
+    flex-direction: column;
     padding: 57px 65px;
     padding-bottom: 65px;
 }
