@@ -28,3 +28,21 @@ exports.create = async (req, res) => {
        /* res.render('results', {mydata: err.message || "Some error occurred while creating user"})*/
     });
 };
+<<<<<<< Updated upstream
+=======
+
+// Find a single User
+exports.findOne = async (req, res) => {
+        UserModel.findOne({email: req.body.email, password: req.body.password}, function (err, user) {
+            if (err) {
+                console.log(err);
+            }
+
+            if (!user) {
+                error_msg = "Invalid login or password"
+                return res.render('signin',{errormsg: error_msg})
+            }
+            return res.render('index.ejs');
+        })
+}
+>>>>>>> Stashed changes
