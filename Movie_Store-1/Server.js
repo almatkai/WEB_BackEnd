@@ -32,10 +32,10 @@ app.get('/trailer', (req, res) =>{ res.render('trailer.ejs') });
 app.get('/showMovie', (req, res) =>{ res.render('ShowMovie.ejs') });
 
 app.get('/signup', (req, res) =>{ res.render('Signup.ejs') });
-app.get('/signin', (req, res) =>{ res.render('signin.ejs') });
+app.get('/signin', (req, res) =>{ res.render('signin.ejs',{errormsg: " "}) });
 
 
-app.post('/', (req, res) => {
+app.post('/sign_up', (req, res) => {
     create(req,res)
 });
 

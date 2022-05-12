@@ -6,7 +6,6 @@ exports.create = async (req, res) => {
         //res.status(400).send({ message: "Content can not be empty!" });
         res.status(400).render('results', {mydata: "Content can not be empty!"})
     }
-
     let Gender = req.body.gender;
     if (Gender == "on"){ Gender = "Male";}
     else{ Gender = "Female";}
@@ -22,10 +21,6 @@ exports.create = async (req, res) => {
     });
 
     await user.save().then(data => {
-        /*res.send({
-            message:"User created successfully!!",
-            user:data
-        });*/
         res.render('index.ejs')
     }).catch(err => {
         res.status(500).send({
@@ -36,7 +31,6 @@ exports.create = async (req, res) => {
 
 // Find a single User
 exports.findOne = async (req, res) => {
-
         console.log("hello")
         UserModel.findOne({email: req.body.email, password: req.body.password}, function (err, user) {
             if (err) {
@@ -44,44 +38,9 @@ exports.findOne = async (req, res) => {
             }
 
             if (!user) {
-                   /* ejs.filters.get = function(obj, prop, def) {
-                        return obj[prop] === undefined ? def : obj[prop];
-                    };
-*/
-
-
-/*
-                    window.document.getElementById("error_box").style.display = "block";
-*/
-
-
-                /*const errormsg = "Invalid login or password"
-                return res.render('signin'/!*,{error: errormsg}*!/)*/
+                error_msg = "Invalid login or password"
+                return res.render('signin',{errormsg: error_msg})
             }
-
-
             return res.render('index.ejs');
-
         })
-
-
 }
-        //change params to query
-        //const user = await UserModel.findById(req.query.id); //change params to query
-        //res.status(200).json(user);
-        /*else
-        {
-            res.status(200).render('index', {
-                mydata: "user :" + user.firstName
-/!*
-                    + user.lastName + " " + user.email + " " + user.phone
-*!/
-
-
-            })
-        }
-    } catch(error) {
-        //res.status(404).json({ message: error.message});
-        res.status(404).render('temp', {mydata: error.message})
-    }*/
-
