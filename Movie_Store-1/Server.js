@@ -25,7 +25,7 @@ mongoose.connect(dbConfig.url, {
 });
 
 
-app.get('/', (req, res) =>{ res.render('index.ejs') });
+app.get('/', (req, res) =>{ res.render('index.ejs', {nameProfile: " "}) });
 
 app.get('/search', (req, res) =>{ res.render('search.ejs') });
 
@@ -33,7 +33,8 @@ app.get('/trailer', (req, res) =>{ res.render('trailer.ejs') });
 
 app.get('/showMovie', (req, res) =>{ res.render('ShowMovie.ejs') });
 
-app.get('/signup', (req, res) =>{ res.render('Signup.ejs') });
+app.get('/signup', (req, res) =>{ res.render('Signup.ejs', {errormsg1:" "}) });
+
 app.get('/signin', (req, res) =>{ res.render('signin.ejs',{errormsg: " "}) });
 
 
