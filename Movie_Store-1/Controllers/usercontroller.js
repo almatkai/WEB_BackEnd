@@ -28,8 +28,6 @@ exports.create = async (req, res) => {
        /* res.render('results', {mydata: err.message || "Some error occurred while creating user"})*/
     });
 };
-<<<<<<< Updated upstream
-=======
 
 // Find a single User
 exports.findOne = async (req, res) => {
@@ -45,4 +43,4 @@ exports.findOne = async (req, res) => {
             return res.render('index.ejs');
         })
 }
->>>>>>> Stashed changes
+
