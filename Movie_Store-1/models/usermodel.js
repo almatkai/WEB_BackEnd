@@ -2,7 +2,6 @@ let mongoose = require('mongoose');
 let schema = new mongoose.Schema({
     email: {
         type: String,
-        // required: true,
         unique: true
     },
     firstName: {
@@ -11,7 +10,6 @@ let schema = new mongoose.Schema({
     lastName:  { type: String},
     phone: {
         type: String,
-        // required: [true]
     },
     age: {
         type: Number,
@@ -19,10 +17,6 @@ let schema = new mongoose.Schema({
     gender: String,
     password: {
         type: String,
-        // required: [true],
-        // minLength: 6,
-        // maxLength: 26
-
     }
 });
 let userModel = new mongoose.model('User', schema);

@@ -158,9 +158,9 @@ h6 {
 .bg-gra-02 {
     background: -webkit-gradient(linear, left bottom, left top, from(#151515), to(red));
     background: -webkit-linear-gradient(bottom, #151515 20%, red 100%);
-    background: -moz-linear-gradient(bottom, #151515 20%, red 100%);
-    background: -o-linear-gradient(bottom, #151515 20%, red 100%);
-    background: linear-gradient(to top, #151515 20%, red 100%);
+    background: -moz-linear-gradient(bottom, #151515 20%, #da1d1d 100%);
+    background: -o-linear-gradient(bottom, #151515 20%, #da1d1d 100%);
+    background: linear-gradient(to top, #151515 20%, #da1d1d 100%);
 }
 
 .p-t-100 {
