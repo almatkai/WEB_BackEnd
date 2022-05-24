@@ -1,0 +1,146 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Our movie Website",
+    "description": "This is our first website with backend",
+    "license": {
+      "name": "AITU",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Movies",
+      "description": "We have api's for searching moviesv and loading trailers from youtube"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+        "/signin": {
+        "post": {
+          "tags": ["Autorization"],
+          "summary": "Autorization via email and password",
+          "description": "",
+          "parameters": [
+            {
+              "name": "user",
+              "in": "body",
+              "description": "Comparing user input with DB info",
+              "schema": {
+                "$ref": "#/definitions/AuthforUser"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/AuthforUser"
+              }
+            },
+            "404": {
+              "description": "User not found error"
+            }
+          }
+        }
+      },
+
+
+      "/sign_up": {
+      "post": {
+        "tags": [
+          "UserCreation"
+        ],
+        "summary": "Creating user and saving on DB",
+
+        "description": "Create new user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to create",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+
+        "produces": [
+          "application/json/ejs"
+        ],
+        "responses": {
+          "200": {
+            "description": "New user is created",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          },
+          "409": {
+            "description": "Database error"
+          }
+        }
+      },
+        "/search": {
+          "get": {
+            "tags": ["Searching movie"],
+            "summary": "OMDb api",
+            "description": "Searching movie from OMDb api",
+            "responses": {
+              "200": {
+                "description": "OK"
+              }
+            }
+          }
+        }
+      }
+  },
+  "definitions": {
+    "User": {
+      "required": ["email"],
+      "properties": {
+        "email": {
+          "type": "string",
+          "uniqueItems": true
+        },
+        "firstName": {
+          "type": "string",
+          "default": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "age": {
+          "type": "Number"
+        }
+      }
+    },
+
+    "AuthforUser": {
+      "required": ["email"],
+      "properties": {
+        "email": {
+          "type": "string",
+          "unique": "true"
+        },
+
+        "password": {
+          "type": "String"
+        }
+      }
+    }
+  }
+}

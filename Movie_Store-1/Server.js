@@ -2,15 +2,17 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const path = require('path')
 const http = require("http");
+const swaggerUi = require('swagger-ui-express')
+swaggerDocument = require('./swagger.json');
 const dbConfig = require('./config/database.config.js');
 const {create, findOne} = require("./Controllers/usercontroller");
 const mongoose = require('mongoose')
-const UserModel = require("./models/usermodel");
 const app = express()
 let port = process.env.PORT;
 if (port == null || port == "") {
     port = 8000;
 }
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.set('view engine', 'ejs');
 app.use(express.static(path.resolve(__dirname, 'views')));
 app.use(bodyParser.urlencoded({extended: true}))
